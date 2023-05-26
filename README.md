@@ -7,9 +7,9 @@ Traditional elections satisfy neither citizens nor political authorities in rece
 We propose a Blockchain based solution for solving various problems faced in the voting process. This project is a simple attemmpt to design and build an electronic voting system; where we make use of *Solidity Smart Contracts* to create a decentralized voting application (DApp). 
 
 
-Our implementation consists of a web interface to allow user to interact with the blockchain, rest api to handle required records of data. For a private blockchain, we've used go-based Ethereum implementation-[geth]().
+Our implementation consists of a web interface to allow user to interact with the blockchain, rmysql to handle required records of data. For a  blockchain, we've used Truffle as a Local development network.
 
-This project is inspired by [this paper](https://skemman.is/bitstream/1946/31161/1/Research-Paper-BBEVS.pdf). 
+ 
 
 ## System Design
 
@@ -34,7 +34,7 @@ Ultimatley our project converges to a Decentralised Web application(). The compo
 2. Election creation smart contract.
  the election creation smart contract is what is used to deploy the ballots on the blockchain. Only the ECI representative, operating the ECI portal client can connect to this contract. This contract takes input as the database of all candidates of respective districts and deploys ballots for every district onto the blockchain. This contract also has a function which returns the addresses of the deployed ballots, so they can be used by the voting machines later.
 
-![alt text](https://github.com/safeer2978/Blockchain_Based_Voting_system/blob/master/Diagrams/sm1.png)![alt text](https://github.com/safeer2978/Blockchain_Based_Voting_system/blob/master/Diagrams/sm2.png)
+
 
 ### Web clients
 There are two web clients in this project viz the ECI portal and the voting machine. Both of these clients require communication using both http and rpc protocols, hence make use of api/libraries such as XMLHttpRequest and web3.js
